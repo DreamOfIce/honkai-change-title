@@ -1,0 +1,26 @@
+name: 'GitHub Actions Mirror'
+
+on: [push, delete]
+
+jobs:
+  mirror_to_gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@gitee.com:creeper-2077/honkai-change-title.git
+          ssh_private_key:
+            ${{ secrets.BACKUP_KEY }}
+
+  mirrot_to_codeberg:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v1
+     - uses: pixta-dev/repository-mirroring-action@v1
+       with:
+         target_repo_url:
+           git@codeberg.org:creeper2077/honkai-change-title.git
+         ssh_private_key:
+           ${{ secrets.BACKUP_KEY }}
