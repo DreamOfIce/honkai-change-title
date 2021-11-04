@@ -16,7 +16,7 @@
 ## 使用
 在网页内引用`title.min.js`即可:
 ```html
-<script src='https://cdn.jsdelivr.net/gh/Creeper2077/honkai-change-title@main/title.min.js' ></script>
+<script src='https://cdn.jsdelivr.net/gh/Creeper2077/honkai-change-title@main/change-title.min.js' ></script>
 ```
 
 ## 推荐
